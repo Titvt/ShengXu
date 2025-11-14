@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title|e }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 16px 96px;
+        color: black;
+        background: white;
+        line-height: 2;
+        word-break: break-word;
+      }
+      h1 {
+        margin: 24px 0 16px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .content {
+        font-size: 24px;
+        white-space: pre-wrap;
+      }
+      .bottom-wrapper {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px;
+      }
+      .forward-btn {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        color: white;
+        background: #4caf50;
+        text-align: center;
+        text-decoration: none;
+        font-size: 24px;
+        border-radius: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>{{ title|e }}</h1>
+      <div class="content">{{ content|e }}</div>
+    </main>
+    <div class="bottom-wrapper">
+      <a class="forward-btn" href="{{ forward|e }}">下一章</a>
+    </div>
+  </body>
+</html>

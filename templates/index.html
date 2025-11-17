@@ -7,39 +7,34 @@
     <style>
       body {
         margin: 0;
-        padding: 0 16px 96px;
+        padding: 0;
         color: black;
         background: white;
         line-height: 2;
         word-break: break-word;
       }
       h1 {
-        margin: 24px 0 16px;
+        margin: 16px;
         text-align: center;
         font-size: 32px;
         font-weight: bold;
       }
       .content {
+        margin: 0 16px;
+        text-align: justify;
+        text-justify: inter-ideograph;
         font-size: 24px;
         white-space: pre-wrap;
       }
-      .bottom-wrapper {
-        display: flex;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 16px;
-      }
-      .forward-btn {
+      .forward {
         display: block;
-        width: 100%;
+        margin: 16px;
         padding: 8px;
-        color: white;
-        background: #4caf50;
+        color: #4caf50;
         text-align: center;
         text-decoration: none;
         font-size: 24px;
+        border: 2px solid #4caf50;
         border-radius: 32px;
       }
     </style>
@@ -48,9 +43,7 @@
     <main>
       <h1>{{ title|e }}</h1>
       <div class="content">{{ content|e }}</div>
+      <a class="forward" href="{{ forward|e }}">下一章</a>
     </main>
-    <div class="bottom-wrapper">
-      <a class="forward-btn" href="{{ forward|e }}">下一章</a>
-    </div>
   </body>
 </html>
